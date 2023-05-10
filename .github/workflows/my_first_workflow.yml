@@ -6,12 +6,11 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04]
-      steps:
-        - name: Echo a string
-          run: echo "Hello world"
-        - name: A multiline script
-          run: |
-            python3 - V
-            touch my_file_with_workflow.py
-            ls -l
-
+    steps:
+      - name: echo a string
+        run: echo "Hello world"
+      - name: multiline script
+        run: |
+          python3 -V
+          touch my_file_with_workflow.py
+          ls -l
